@@ -48,14 +48,14 @@ const Files = () => {
                 }
             </div>
 
-            <div>
+            {/* <div>
                 {
                     person.data?.map(p => <Modal
                         key={p._id}
                         p={p}
                     ></Modal>)
                 }
-            </div>
+            </div> */}
 
             <div className="mt-5">
                 <label htmlFor="my-modal-4" className="btn bg-primary text-white">Book Appointment</label>

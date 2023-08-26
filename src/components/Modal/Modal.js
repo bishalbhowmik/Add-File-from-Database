@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-const Modal = ({ p }) => {
+const Modal = () => {
     const [file, setFile] = useState();
 
     const [person, setPerson] = useState([]);
@@ -29,7 +29,6 @@ const Modal = ({ p }) => {
     }, [])
 
 
-    const { originalname } = p;
 
     
    

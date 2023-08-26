@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import person from '../../Images/person.jpg';
+import person1 from '../../Images/person1.jpeg';
+import person2 from '../../Images/person2.jpg';
+import person3 from '../../Images/person3.jpg';
+import person4 from '../../Images/person4.jpg';
 import axios from 'axios';
+import './CardOne.css';
 
 const CardOne = ({ info }) => {
     const { title, name, description } = info;
@@ -15,11 +20,12 @@ const CardOne = ({ info }) => {
 
 
     return (
-        <div className='bg-white w-[300px] mb-2 h-[auto] rounded-[2px] p-2 scroll overflow-y-auto h-32'>
+        <div className='bg-white w-[300px] h-32 mb-2 rounded-[2px] p-2'>
+ 
             <div className='flex justify-between mb-5'>
                 <div className='flex items-center'>
-                    <span className='w-4 h-4 rounded-full mr-1'>
-                        <img src={person} alt="" />
+                    <span >
+                        <img className='w-5 h-5 rounded-full mr-1' src={person1} alt="" />
                     </span>
                     <span>
                         <p className='text-xs font-semibold'>{title}</p>
@@ -27,11 +33,11 @@ const CardOne = ({ info }) => {
                 </div>
 
                 <div className='flex items-center'>
-                    <span className='w-4 h-4 rounded-full mr-1'>
-                        <img src={person} alt="" />
+                    <span >
+                        <img className='w-5 h-5 rounded-full mr-1' src={person2} alt="" />
                     </span>
                     <span>
-                        <p className='text-xs font-semibold'>{title}</p>
+                        <p className='text-xs font-semibold'>{name}</p>
                     </span>
                 </div>
 
@@ -40,21 +46,21 @@ const CardOne = ({ info }) => {
             <div className='flex items-center justify-between'>
                 <span className='flex items-center'>
                     <i className="fa-regular fa-calendar-days text-xs mr-2"></i>
-                    <p className='text-xs'>{description}</p>
+                    <p className='text-[11px] font-semibold'>{description}</p>
                 </span>
-                <span className='flex items-center'>
+                <span className='flex items-center bg-[#F3F4F7] px-[6px] py-1 rounded-sm'>
                     <i className="fa-regular fa-calendar-days text-xs mr-1"></i>
-                    <p className='text-xs'>1/2</p>
+                    <p className='text-xs font-semibold'>1/2</p>
                 </span>
             </div>
 
             <div className='flex items-center gap-[6px] mt-4 justify-evenly'>
                 <span className='flex items-center'>
-                    <img className='w-4 h-4 rounded-full mr-1' src={person} alt="" />
+                    <img className='w-5 h-5 rounded-full mr-1' src={person3} alt="" />
 
                 </span >
                 <span >
-                    <img className='w-4 h-4 rounded-full mr-1' src={person} alt="" />
+                    <img className='w-5 h-5 rounded-full mr-1' src={person4} alt="" />
                 </span>
                 <span>
                     <p className='text-xs'>12+</p>
