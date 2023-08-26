@@ -3,6 +3,7 @@ import './App.css';
 import { useEffect, useState } from 'react';
 import CardOne from './components/CardOne/CardOne';
 import HalfCircle from './components/HalfCircle/HalfCircle';
+import Files from './components/Files/Files';
 
 function App() {
   const [information, setInformation] = useState([]);
@@ -26,7 +27,11 @@ function App() {
           ></CardOne>)
         }
       </div>
-     
+
+      <div>
+        <Files></Files>
+      </div>
+
     </div>
   );
 }

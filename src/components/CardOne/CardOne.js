@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import person from '../../Images/person.jpg';
+import axios from 'axios';
 
 const CardOne = ({ info }) => {
     const { title, name, description } = info;
+
+    const [personInfo, setPersonInfo] = useState([]);
+
+    useEffect(() => {
+        axios.get('http://localhost:3001/upload')
+            .then(res => setPersonInfo(res))
+            .catch(err => console.log(err));
+    }, [])
+
+
     return (
         <div className='bg-white w-[300px] mb-2 h-[auto] rounded-[2px] p-2 scroll overflow-y-auto h-32'>
             <div className='flex justify-between mb-5'>
@@ -55,16 +66,21 @@ const CardOne = ({ info }) => {
                     <p className='text-xs'>15</p>
                 </span>
                 <span>
-                    <i className="fa-solid fa-link text-xs"></i>
+
+                    <label htmlFor="my-modal-4" className="cursor-pointer"><i className="fa-solid fa-link text-xs"></i></label>
+
+
+
                 </span>
                 <span>
-                    <p className='text-xs'> 25</p>
+                    <p className='text-xs'> {personInfo.data?.length}</p>
                 </span>
-                <span>
-                    <i className="fa-regular fa-calendar-days text-xs mr-1"></i>
-                </span>
-                <span>
+                <span className='flex items-center gap-2'>
+                    <i className="fa-regular fa-calendar-days text-xs "></i>
                     <p className='text-xs'>30-12-2022</p>
+                </span>
+                <span>
+
                 </span>
 
             </div>
