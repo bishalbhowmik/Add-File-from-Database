@@ -1,29 +1,4 @@
-import logo from './logo.svg';
-import './App.css';
-import { useEffect, useState } from 'react';
-import CardOne from './components/CardOne/CardOne';
-import HalfCircle from './components/HalfCircle/HalfCircle';
-import Files from './components/Files/Files';
-import '../src/style/style.css';
-import Modal from './components/Modal/Modal';
-import Signup from './components/Signup/Signup';
-
-function App() {
-  const [information, setInformation] = useState([]);
-
-  useEffect(() => {
-    fetch('data.json')
-      .then(res => res.json())
-      .then(data => setInformation(data))
-  }, [])
-
-
-
-
-  return (
-    
-    <div className='max-w-[90%] mx-auto mt-6'>
-      <div className='flex items-center gap-2  h-[100vh]'>
+   <div className='flex items-center gap-2  h-[100vh]'>
         <div className='bg-[#F2F4F7] text-[#687084] w-20 h-[700px] overflow-x-auto border min-w-[320px] flex flex-col justify-center items-center'>
           <div className='flex justify-between items-center w-[300px] mt-8 py-4'>
             <div className='flex items-center'>
@@ -199,32 +174,12 @@ function App() {
           </div>
         </div>
 
+        {/* *********** */}
 
 
-
-
-
-
+        
+        
+      
 
 
       </div>
-
-
-
-      {/* **************************** */}
-
-
-      <div>
-        <Modal>
-
-        </Modal>
-      </div>
-
-
-
-
-    </div>
-  );
-}
-
-export default App;

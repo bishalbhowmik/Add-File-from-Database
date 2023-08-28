@@ -10,7 +10,7 @@ const Files = () => {
     const handleUpload = e => {
         const formData = new FormData();
         formData.append('file', file)
-        axios.post('http://localhost:3001/upload', formData)
+        axios.post('https://backend-bishalbhowmik.vercel.app/upload', formData)
             .then(res => {
                 console.log(res)
                 window.location.reload();
@@ -24,7 +24,7 @@ const Files = () => {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:3001/upload')
+        axios.get('https://task-backend-mu.vercel.app/upload')
             .then(res => setPerson(res))
             .catch(err => console.log(err));
     }, [])

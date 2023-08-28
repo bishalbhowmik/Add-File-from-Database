@@ -6,3 +6,10 @@
     border-bottom-left-radius: 10px;
     border-top-left-radius:  10px;
 }
+
+#two {
+    background-color: #04B5FF;
+}
+#three {
+    background-color: yellow;
+}

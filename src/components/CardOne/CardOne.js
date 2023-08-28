@@ -13,7 +13,7 @@ const CardOne = ({ info }) => {
     const [personInfo, setPersonInfo] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/upload')
+        axios.get('https://task-server2-f0pe.onrender.com/upload')
             .then(res => setPersonInfo(res))
             .catch(err => console.log(err));
     }, [])
@@ -21,7 +21,7 @@ const CardOne = ({ info }) => {
 
     return (
         <div className='bg-white w-[300px] h-32 mb-2 rounded-[2px] p-2'>
- 
+
             <div className='flex justify-between mb-5'>
                 <div className='flex items-center'>
                     <span >
@@ -45,11 +45,13 @@ const CardOne = ({ info }) => {
             </div>
             <div className='flex items-center justify-between'>
                 <span className='flex items-center'>
-                    <i className="fa-regular fa-calendar-days text-xs mr-2"></i>
+
+                    <i className="fa-solid fa-layer-group text-xs mr-2"></i>
                     <p className='text-[11px] font-semibold'>{description}</p>
                 </span>
                 <span className='flex items-center bg-[#F3F4F7] px-[6px] py-1 rounded-sm'>
-                    <i className="fa-regular fa-calendar-days text-xs mr-1"></i>
+                    
+                    <i className="fa-solid fa-calendar-days text-xs mr-1"></i>
                     <p className='text-xs font-semibold'>1/2</p>
                 </span>
             </div>
@@ -62,14 +64,14 @@ const CardOne = ({ info }) => {
                 <span >
                     <img className='w-5 h-5 rounded-full mr-1' src={person4} alt="" />
                 </span>
-                <span>
-                    <p className='text-xs'>12+</p>
+                <span className='w-5 h-5 bg-[#F3F4F7] rounded-full text-[10px] font-semibold text-center' >
+                    <p className='text-center mt-[2px]'>12+</p>
                 </span>
                 <span>
-                    <i className="fa-regular fa-comments text-xs"></i>
+                    <i className="fa-regular fa-comments"></i>
                 </span>
                 <span>
-                    <p className='text-xs'>15</p>
+                    <p className='text-xs font-semibold'>15</p>
                 </span>
                 <span>
 
@@ -79,11 +81,11 @@ const CardOne = ({ info }) => {
 
                 </span>
                 <span>
-                    <p className='text-xs'> {personInfo.data?.length}</p>
+                    <p className='text-xs font-semibold'> {personInfo.data?.file?.length}</p>
                 </span>
                 <span className='flex items-center gap-2'>
                     <i className="fa-regular fa-calendar-days text-xs "></i>
-                    <p className='text-xs'>30-12-2022</p>
+                    <p className='text-xs font-semibold'>30-12-2022</p>
                 </span>
                 <span>
 
